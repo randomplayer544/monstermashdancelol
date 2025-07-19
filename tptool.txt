@@ -1,0 +1,13 @@
+local player = game.Players.LocalPlayer
+
+local char = player.Character
+
+local tool = Instance.new("Tool",player.Backpack)
+
+tool.Name = "TPTool"
+
+tool.RequiresHandle = false 
+
+tool.Activated:Connect(function()
+   char:MoveTo(player:GetMouse().Hit.Position)
+end)

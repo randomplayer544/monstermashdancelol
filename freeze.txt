@@ -1,0 +1,5 @@
+local player = game.Players.LocalPlayer
+
+local torso = player.Character.Torso
+
+torso.Anchored = true

@@ -1,5 +1,9 @@
 local player = game.Players.LocalPlayer
 
-local torso = player.Character.Torso
+local hrp = player.Character.HumanoidRootPart
 
-torso.Anchored = true
+if hrp.Anchored == true then
+   hrp.Anchored = true
+else
+   hrp.Anchored = false
+end

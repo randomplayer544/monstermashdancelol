@@ -3,7 +3,7 @@ local player = game.Players.LocalPlayer
 local hrp = player.Character.HumanoidRootPart
 
 if hrp.Anchored == true then
-   hrp.Anchored = true
-else
    hrp.Anchored = false
+else
+   hrp.Anchored = true
 end

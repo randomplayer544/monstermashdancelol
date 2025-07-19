@@ -1,0 +1,28 @@
+local player = game.Players.LocalPlayer
+
+local char = player.Character
+
+if char.Torso:FindFirstChild("Indicator") then
+   char.Torso.Indicator:Destroy()
+else
+
+   local indicator = Instance.new("Part",char.Torso)
+
+   indicator.Transparency = 1
+
+   indicator.CanCollide = false
+
+end
+
+task.wait(0.5)
+
+while char.Torso:FindFirstChild("Indicator") do
+      for i , v in pairs(workspace:GetDescendants()) do
+         if v:IsA("Part") or v:IsA("MeshPart") or v:IsA("Union") then
+            if char.Torso.Position.Y < v.Position.Y then
+               v.CanCollide = false
+            end
+         end
+      end
+   task.wait()
+end

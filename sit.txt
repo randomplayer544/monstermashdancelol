@@ -1,0 +1,7 @@
+--sit
+
+local player = game.Players.LocalPlayer
+
+local hum = player.Character:FindFirstChildOfClass("Humanoid")
+
+hum.Sit = true
